@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bq_educational",
+  "name": "Educational Expansion",
+  "description": "Provides Better Questing tasks for worksheets, quizes and written responses. Also contains tools for class/group management",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Funwayguy"],
+  "credits": "metallrider",
+  "logoFile": "title.png",
+  "screenshots": [],
+  "dependencies": ["betterquesting"]
+}
+]
