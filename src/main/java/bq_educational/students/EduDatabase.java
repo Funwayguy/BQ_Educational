@@ -18,7 +18,10 @@ public class EduDatabase
 	
 	public String getGrade(int raw)
 	{
-		if(!useScaleE)
+		if(raw < 0)
+		{
+			return "N/A"; // Ungraded
+		} else if(!useScaleE)
 		{
 			return gradeScaleF[MathHelper.clamp_int(raw, 0, gradeScaleF.length)];
 		} else

@@ -2,8 +2,10 @@ package bq_educational.core;
 
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.Logger;
+import betterquesting.quests.tasks.TaskRegistry;
 import bq_educational.core.proxies.CommonProxy;
 import bq_educational.handlers.ConfigHandler;
+import bq_educational.tasks.EduTaskWorksheet;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -47,6 +49,8 @@ public class BQ_Educational
     public void init(FMLInitializationEvent event)
     {
     	proxy.registerThemes();
+    	
+    	TaskRegistry.RegisterTask(EduTaskWorksheet.class, "worksheet");
     }
     
     @EventHandler

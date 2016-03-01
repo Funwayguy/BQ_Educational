@@ -12,7 +12,7 @@ public class Worksheet
 {
 	public int ID = -1; // Do not edit
 	public String title = "New Worksheet";
-	public int grade = 0; // Defaults to lowest grade
+	public int grade = -1; // Defaults to lowest grade
 	public ArrayList<QuestionBase> questionList = new ArrayList<QuestionBase>();
 	
 	/**
@@ -25,7 +25,7 @@ public class Worksheet
 			q.clean();
 		}
 		
-		grade = 0;
+		grade = -1;
 	}
 	
 	/**
@@ -59,7 +59,7 @@ public class Worksheet
 	public void readFromJson(JsonObject json)
 	{
 		title = JsonHelper.GetString(json, "title", "New Worksheet");
-		grade = JsonHelper.GetNumber(json, "grade", 0).intValue();
+		grade = JsonHelper.GetNumber(json, "grade", -1).intValue();
 		
 		questionList = new ArrayList<QuestionBase>();
 		for(JsonElement je : JsonHelper.GetArray(json, "questions"))
